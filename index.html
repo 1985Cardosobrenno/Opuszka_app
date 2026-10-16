@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agende seu próximo atendimento de beleza com praticidade."
+    />
+    <meta name="theme-color" content="#e9eaed" />
+    <title>Gabrielly Opuszka — Agendamentos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Gabrielly Opuszka, página inicial">
+        <span class="brand-mark" aria-hidden="true">GO</span>
+        <span class="brand-name">GABRIELLY <strong>OPUSZKA</strong></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a class="nav-link active" href="#inicio">Início</a>
+        <a class="nav-link" href="#servicos">Serviços</a>
+        <a class="nav-link" href="#agendamentos">Meus horários</a>
+      </nav>
+
+      <button class="account-button" type="button" data-open-auth>
+        <span class="account-avatar" aria-hidden="true">M</span>
+        <span class="account-label">Minha conta</span>
+        <span class="chevron" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero section-wrap" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> SEU TEMPO, SEU MOMENTO</p>
+          <h1>Beleza com hora <em>marcada.</em></h1>
+          <p class="hero-description">
+            Escolha seu cuidado, encontre o melhor horário e deixe o resto com a gente.
+          </p>
+          <button class="button button-dark" type="button" data-open-booking>
+            Agendar meu horário <span aria-hidden="true">↗</span>
+          </button>
+          <div class="hero-note">
+            <span class="sparkle" aria-hidden="true">✳</span>
+            <span>Um atendimento pensado para você.</span>
+          </div>
+        </div>
+        <div class="hero-visual" role="img" aria-label="Detalhe delicado de um atendimento de beleza">
+          <div class="hero-photo">
+            <div class="photo-caption">
+              <span class="caption-kicker">CUIDADO EM CADA DETALHE</span>
+              <span class="caption-title">Sua beleza,<br />no seu ritmo.</span>
+            </div>
+          </div>
+          <div class="photo-stamp" aria-hidden="true">
+            <span>um momento</span>
+            <strong>para<br />você</strong>
+            <span class="stamp-star">✳</span>
+          </div>
+          <span class="hero-side-note">BELEZA • CUIDADO • BEM-ESTAR</span>
+        </div>
+      </section>
+
+      <section class="booking-strip" aria-label="Resumo do estúdio">
+        <div class="strip-item">
+          <span class="strip-icon" aria-hidden="true">◷</span>
+          <span><strong>Agendamento fácil</strong><small>Escolha em poucos passos</small></span>
+        </div>
+        <span class="strip-divider" aria-hidden="true"></span>
+        <div class="strip-item">
+          <span class="strip-icon" aria-hidden="true">♡</span>
+          <span><strong>Atendimento especial</strong><small>Cuidado do início ao fim</small></span>
+        </div>
+        <span class="strip-divider" aria-hidden="true"></span>
+        <div class="strip-item">
+          <span class="strip-icon" aria-hidden="true">⌖</span>
+          <span><strong>Seu espaço de beleza</strong><small>Um momento só seu</small></span>
+        </div>
+      </section>
+
+      <section class="services-section section-wrap" id="servicos">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> ESCOLHA SEU CUIDADO</p>
+            <h2>Serviços <em>para você</em></h2>
+          </div>
+          <button class="text-button" type="button" data-open-booking>
+            Ver horários disponíveis <span aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="service-grid" id="service-list" aria-live="polite"></div>
+      </section>
+
+      <section class="appointment-section section-wrap" id="agendamentos">
+        <div class="appointment-card">
+          <div class="appointment-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span> SEU PRÓXIMO MOMENTO</p>
+            <h2 id="appointment-title">Seu próximo cuidado<br /><em>começa aqui.</em></h2>
+            <p id="appointment-description">
+              Ainda não tem horário marcado? Encontre um horário que combine com você.
+            </p>
+            <button class="button button-dark" type="button" data-open-booking>
+              Encontrar um horário <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div class="appointment-status" id="appointment-status">
+            <div class="status-icon" aria-hidden="true">✳</div>
+            <span class="status-label">AGENDA ABERTA</span>
+            <strong>Seu próximo<br />momento espera<br />por você.</strong>
+            <span class="status-decoration" aria-hidden="true">a.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">GO</span>
+        <span class="brand-name">GABRIELLY <strong>OPUSZKA</strong></span>
+      </a>
+      <p>Um momento de cuidado, feito para você.</p>
+      <span class="footer-location">ATENDIMENTO COM HORA MARCADA</span>
+    </footer>
+
+    <nav class="mobile-nav" aria-label="Navegação móvel">
+      <a class="mobile-nav-link active" href="#inicio"><span aria-hidden="true">⌂</span>Início</a>
+      <a class="mobile-nav-link" href="#servicos"><span aria-hidden="true">✳</span>Serviços</a>
+      <a class="mobile-nav-link" href="#agendamentos"><span aria-hidden="true">◷</span>Horários</a>
+    </nav>
+
+    <dialog class="dialog booking-dialog" id="booking-dialog" aria-labelledby="booking-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Fechar">×</button>
+        <div class="dialog-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> VAMOS ENCONTRAR SEU HORÁRIO</p>
+          <h2 id="booking-title">Agende seu <em>momento.</em></h2>
+          <p>Escolha o serviço, o dia e o horário que funcionam para você.</p>
+        </div>
+        <form id="booking-form">
+          <label class="field-label" for="booking-service">1. Escolha o serviço</label>
+          <select id="booking-service" name="service" required></select>
+
+          <fieldset class="booking-fieldset">
+            <legend class="field-label">2. Escolha o dia</legend>
+            <div class="date-options" id="date-options"></div>
+            <input id="booking-date" name="date" type="hidden" required />
+          </fieldset>
+
+          <fieldset class="booking-fieldset">
+            <legend class="field-label">3. Horários disponíveis</legend>
+            <div class="time-options" id="time-options"></div>
+            <input id="booking-time" name="time" type="hidden" required />
+          </fieldset>
+
+          <div class="booking-summary">
+            <span>Valor do serviço</span>
+            <strong id="booking-price">—</strong>
+          </div>
+          <button class="button button-dark booking-submit" type="submit">
+            Confirmar agendamento <span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-note">Esta é uma demonstração. O agendamento não será enviado ao estúdio.</p>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog class="dialog auth-dialog" id="auth-dialog" aria-labelledby="auth-title">
+      <div class="dialog-shell">
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Fechar">×</button>
+        <div class="dialog-heading">
+          <p class="eyebrow"><span class="eyebrow-line"></span> BEM-VINDA DE VOLTA</p>
+          <h2 id="auth-title">Sua conta <em>Gabrielly Opuszka.</em></h2>
+          <p>Acesse para acompanhar seus horários e cuidados.</p>
+        </div>
+        <div class="auth-tabs" role="tablist" aria-label="Acesso à conta">
+          <button class="auth-tab active" type="button" role="tab" aria-selected="true" data-auth-mode="login">Entrar</button>
+          <button class="auth-tab" type="button" role="tab" aria-selected="false" data-auth-mode="register">Criar conta</button>
+        </div>
+        <form id="auth-form">
+          <label class="field-label" for="auth-name" id="auth-name-label" hidden>Seu nome</label>
+          <input id="auth-name" name="name" type="text" autocomplete="name" placeholder="Seu nome" hidden />
+          <label class="field-label" for="auth-email">E-mail</label>
+          <input id="auth-email" name="email" type="email" autocomplete="email" placeholder="voce@email.com" required />
+          <label class="field-label" for="auth-password">Senha</label>
+          <div class="password-field">
+            <input id="auth-password" name="password" type="password" autocomplete="current-password" placeholder="Mínimo de 8 caracteres" minlength="8" required />
+            <button class="password-toggle" type="button" data-toggle-password aria-label="Mostrar senha" aria-pressed="false" hidden>
+              <svg class="password-eye" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <svg class="password-eye-off" viewBox="0 0 24 24" aria-hidden="true" hidden>
+                <path d="m3 3 18 18M10.6 10.6a2 2 0 0 0 2.8 2.8" />
+                <path d="M9.9 5.2A10.8 10.8 0 0 1 12 5c6.4 0 10 7 10 7a16 16 0 0 1-3.1 3.8M6.2 6.2C3.5 8 2 12 2 12s3.6 7 10 7a10 10 0 0 0 4-.8" />
+              </svg>
+            </button>
+          </div>
+          <button class="button button-dark booking-submit" type="submit" id="auth-submit">Entrar na minha conta <span aria-hidden="true">↗</span></button>
+          <p class="form-note">Protótipo visual: autenticação ainda não conectada a um servidor.</p>
+        </form>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
